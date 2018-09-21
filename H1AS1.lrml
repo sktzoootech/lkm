@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lrml:LegalRuleML xmlns:ruleml="http://ruleml.org/spec" xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <lrml:Statements key="statementsBlock">
+        <lrml:PrescriptiveStatement key="1.0.1.f">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Neg>
+                        <ruleml:Atom key=":atom6">
+                            <ruleml:Rel iri=":housing"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:Neg>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.1.g">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom7">
+                        <ruleml:Rel iri=":housing"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom8">
+                        <ruleml:Rel iri=":AcceptableSolution"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.1.h">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom9">
+                        <ruleml:Rel iri=":communalResidential"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom10">
+                        <ruleml:Rel iri=":AcceptableSolution"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.1.i">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom11">
+                        <ruleml:Rel iri=":communalNon-residential"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom12">
+                        <ruleml:Rel iri=":AcceptableSolution"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.1.j">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom13">
+                        <ruleml:Rel iri=":commercialBuilding"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom14">
+                        <ruleml:Rel iri=":AcceptableSolution"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.1.z">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.1 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Neg>
+                        <ruleml:Atom key=":atom15">
+                            <ruleml:Rel iri=":AcceptableSolution"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:Neg>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.2.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom16">
+                        <ruleml:Rel iri=":AcceptableSolution"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Neg>
+                            <ruleml:Atom key=":atom17">
+                                <ruleml:Rel iri=":useOfFoilInsulation"/>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+                        </ruleml:Neg>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.2.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom18">
+                            <ruleml:Rel iri=":housing"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom19">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom20">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.2.c">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom21">
+                            <ruleml:Rel iri=":communalResidential"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom22">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom23">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.2.d">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom24">
+                            <ruleml:Rel iri=":communalNon-residential"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom25">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom26">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.2.e">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom27">
+                            <ruleml:Rel iri=":commercialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom28">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom29">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.3.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.3</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Neg>
+                            <ruleml:Atom key=":atom30">
+                                <ruleml:Rel iri=":housing"/>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+                        </ruleml:Neg>
+                        <ruleml:Atom key=":atom31">
+                            <ruleml:Rel iri=":netLettableAreaNoGreaterThan300m2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom32">
+                        <ruleml:Rel iri=":smallBuilding"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.3.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.3</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Neg>
+                            <ruleml:Atom key=":atom33">
+                                <ruleml:Rel iri=":housing"/>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+                        </ruleml:Neg>
+                        <ruleml:Atom key=":atom34">
+                            <ruleml:Rel iri=":netLettableAreaNoGreaterThan300m2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom35">
+                        <ruleml:Rel iri=":largeBuilding"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.4.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Neg>
+                        <ruleml:Atom key=":atom36">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:Neg>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.4.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom37">
+                            <ruleml:Rel iri=":housing"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom38">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom39">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.4.c">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom40">
+                            <ruleml:Rel iri=":communalResidential"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom41">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom42">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.4.d">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom43">
+                            <ruleml:Rel iri=":communalNon-residential"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom44">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom45">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.4.e">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom46">
+                            <ruleml:Rel iri=":commercialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom47">
+                            <ruleml:Rel iri=":industrialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom48">
+                            <ruleml:Rel iri=":theNon-industrialPortionShallBeTreatedSeparatelyAccordingToItsClassification"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.f">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Neg>
+                        <ruleml:Atom key=":atom54">
+                            <ruleml:Rel iri=":housing"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:Neg>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.g">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom55">
+                        <ruleml:Rel iri=":housing"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom56">
+                        <ruleml:Rel iri=":ThisVerificationMethodCanBeUsed"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.h">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom57">
+                        <ruleml:Rel iri=":communalResidential"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom58">
+                        <ruleml:Rel iri=":ThisVerificationMethodCanBeUsed"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.i">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom59">
+                        <ruleml:Rel iri=":communalNon-residential"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom60">
+                        <ruleml:Rel iri=":ThisVerificationMethodCanBeUsed"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.j">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom61">
+                        <ruleml:Rel iri=":commercialBuilding"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom62">
+                        <ruleml:Rel iri=":ThisVerificationMethodCanBeUsed"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.0.z">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.0 (contextual rule for defining building type)</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Neg>
+                        <ruleml:Atom key=":atom63">
+                            <ruleml:Rel iri=":ThisVerificationMethodCanBeUsed"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:Neg>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.1.1.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom64">
+                        <ruleml:Rel iri=":housing"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom65">
+                            <ruleml:Rel iri=":TheModellingMethodDescribedInNZS4218section4.3isAVerificationMethodForNZBCClauseH1.3.1(a)"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.1.1.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom66">
+                        <ruleml:Rel iri=":INCLUDED_1"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.1.1.c">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom67">
+                        <ruleml:Rel iri=":TheModellingMethodDescribedInNZS4218section4.3"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom68">
+                        <ruleml:Rel iri=":VerificationMethodForNZBCClauseH1.3.2E"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.1.1.d">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom69">
+                            <ruleml:Rel iri=":INCLUDED_1"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom70">
+                            <ruleml:Rel iri=":smallBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom71">
+                            <ruleml:Rel iri=":TheModellingMethodDescribedInNZS4218section4.3isAVerificationMethodForNZBCClauseH1.3.1(a)"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.2.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom72">
+                        <ruleml:Rel iri=":ComplianceWithNZBCClauseH1.3.2E(BuildingPerformanceIndexOrBPI)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom73">
+                            <ruleml:Rel iri=":satisfiesNZBCClauseH1.3.1(a)"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.3.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.3</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Neg>
+                            <ruleml:Atom key=":atom74">
+                                <ruleml:Rel iri=":housing"/>
+                                <ruleml:Var>X</ruleml:Var>
+                            </ruleml:Atom>
+                        </ruleml:Neg>
+                        <ruleml:Atom key=":atom75">
+                            <ruleml:Rel iri=":largeBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom76">
+                            <ruleml:Rel iri=":TheModellingMethodDescribedInNZS4243.1section4.4isAVerificationMethodForNZBCClauseH1.3.1(a)"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="1.4.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 1.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom77">
+                        <ruleml:Rel iri=":TheThermalResistance(R-values)ofBuildingElements"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom78">
+                            <ruleml:Rel iri=":verifiedByUsingNZS4214"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.1.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom79">
+                        <ruleml:Rel iri=":windowsToBeConstructedInSuchAWayThatTheyAreCapableOfBeingFixedInTheClosedPosition"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom80">
+                        <ruleml:Rel iri=":satisfyTheRequirementsOfNZBCH1.3.1(b)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.1.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom81">
+                        <ruleml:Rel iri=":doorsToBeConstructedInSuchAWayThatTheyAreCapableOfBeingFixedInTheClosedPosition"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom82">
+                        <ruleml:Rel iri=":satisfyTheRequirementsOfNZBCH1.3.1(b)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.1.c">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom83">
+                        <ruleml:Rel iri=":ventsToBeConstructedInSuchAWayThatTheyAreCapableOfBeingFixedInTheClosedPosition"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom84">
+                        <ruleml:Rel iri=":satisfyTheRequirementsOfNZBCH1.3.1(b)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.1.d">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom85">
+                        <ruleml:Rel iri=":otherBuildingElementsThatAllowSignificantMovementOfAirToBeConstructedInSuchAWayThatTheyAreCapableOfBeingFixedInTheClosedPosition"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom86">
+                        <ruleml:Rel iri=":satisfyTheRequirementsOfNZBCH1.3.1(b)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.2.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom87">
+                        <ruleml:Rel iri=":ConstructionInAccordanceWithNZS4218section3andSection4.1or4.2(asModifiedByParagraphs2.1.3to2.1.7)"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom88">
+                            <ruleml:Rel iri=":satisfiesNZBCH1.3.2EForHousingOfAnySize,includingMulti-unitDwellings"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.3.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.3</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom89">
+                        <ruleml:Rel iri=":RecessedLuminaires"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom90">
+                            <ruleml:Rel iri=":complyWithTheElectricitySafetyRegulations2010"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.4.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom91">
+                        <ruleml:Rel iri=":RecessedLuminairesThatCanBeSafelyAbuttedToInsulation"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom92">
+                            <ruleml:Rel iri=":complyWithTheElectricity(Safety)Regulations2010"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.4.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.4</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom93">
+                        <ruleml:Rel iri=":CeilingAccessHatchesOftenFormPartOfTheThermalEnvelope"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom94">
+                            <ruleml:Rel iri=":beInsulated"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.5.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.5</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom95">
+                        <ruleml:Rel iri=":ConcreteSlab-on-groundFloors"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom96">
+                            <ruleml:Rel iri=":constructionR-valueOf1.3,unlessAHigherR-valueIsJustifiedByCalculationOrPhysicalTesting"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.6.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.6</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom97">
+                        <ruleml:Rel iri=":theGlazingAreaIs50%orLessOfTheTotalWallArea"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom98">
+                            <ruleml:Rel iri=":TheCalculationMethodShallOnlyBeUsed(inClause4.2.1inNZS4218)"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.1.7.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.1.7</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom99">
+                            <ruleml:Rel iri=":AADoorIsGreaterThan6%ofTheTotalWallArea"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom100">
+                            <ruleml:Rel iri=":ADoorIsGreaterThan6m2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom101">
+                            <ruleml:Rel iri=":ADoorShallBeSetToTheDifferenceBetweenADoorAndTheGreaterOf6m2or6%ofTheTotalWallArea"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.2.1.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.2.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom102">
+                        <ruleml:Rel iri=":ConstructionInAccordanceWith:NZS4218section3and4.2"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom103">
+                        <ruleml:Rel iri=":satisfiesTheRequirementsOfNZBCH1.3.1(a)forTheThermalResistanceOfTheBuildingEnvelopeInLargeBuildingsOtherThanHousingHavingANetLettableAreaGreaterThan300m2"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.3.1.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.3.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom104">
+                        <ruleml:Rel iri=":NZS4214"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom105">
+                            <ruleml:Rel iri=":AcceptableMethodsForDeterminingTheThermalResistance(R-values)ofBuildingElements"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="2.3.2.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 2.3.2</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom106">
+                        <ruleml:Rel iri=":AS/NZ4859.1"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Permission iri="">
+                        <ruleml:Atom key=":atom107">
+                            <ruleml:Rel iri=":AcceptableMethodsForDeterminingTheThermalResistance(R-values)ofInsulationMaterials"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Permission>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="4.0.1.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 4.0.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom108">
+                            <ruleml:Rel iri=":complyingWithNZS4218section3andSection4.2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom109">
+                            <ruleml:Rel iri=":smallBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom110">
+                        <ruleml:Rel iri=":TheRequirementsOfNZBCH1.3.3(f)areSatisfied"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="4.0.1.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 4.0.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom111">
+                            <ruleml:Rel iri=":complyingWithNZS4218section3andSection4.3"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom112">
+                            <ruleml:Rel iri=":smallBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom113">
+                        <ruleml:Rel iri=":TheRequirementsOfNZBCH1.3.3(f)areSatisfied"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="4.0.1.c">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 4.0.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom114">
+                            <ruleml:Rel iri=":complyingWithNZS4243.1section4.2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom115">
+                            <ruleml:Rel iri=":largeBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom116">
+                        <ruleml:Rel iri=":TheRequirementsOfNZBCH1.3.3(f)areSatisfied"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="4.0.1.d">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 4.0.1</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom117">
+                            <ruleml:Rel iri=":complyingWithNZS4243.1section4.3"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom118">
+                            <ruleml:Rel iri=":largeBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom119">
+                        <ruleml:Rel iri=":TheRequirementsOfNZBCH1.3.3(f)areSatisfied"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="5.0.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 5.0</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:Atom key=":atom120">
+                        <ruleml:Rel iri=":HotWaterSystemsComplyingWithNZS4305"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom key=":atom121">
+                        <ruleml:Rel iri=":satisfyTheRequirementsOfNZBCH1.3.4forTheProvisionOfHotWaterToSanitaryFixturesAndSanitaryAppliances"/>
+                        <ruleml:Var>X</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="6.0.a">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 6.0</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom122">
+                            <ruleml:Rel iri=":commercialBuilding"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom123">
+                            <ruleml:Rel iri=":netLettableAreaGreaterThan300m2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom124">
+                            <ruleml:Rel iri=":ArtificialLightingEnergyConsumptionShallComplyWithNZS4243.2section3.3orSection3.4toSatisfyTheRequirementsOfNZBCH1.3.5"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:PrescriptiveStatement key="6.0.b">
+            <ruleml:Rule>
+                <lrml:Paraphrase>Article: 6.0</lrml:Paraphrase>
+                <lrml:hasStrength>
+                    <lrml:DefeasibleStrength iri="http://spindle.data61.csiro.au/spindle/ruleStrength#DEFEASIBLE"/>
+                </lrml:hasStrength>
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom key=":atom125">
+                            <ruleml:Rel iri=":communalNon-residential"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom key=":atom126">
+                            <ruleml:Rel iri=":netLettableAreaGreaterThan300m2"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <lrml:Obligation iri="http://spindle.data61.csiro.au/spindle/deontic#OM">
+                        <ruleml:Atom key=":atom127">
+                            <ruleml:Rel iri=":ArtificialLightingEnergyConsumptionShallComplyWithNZS4243.2section3.3orSection3.4toSatisfyTheRequirementsOfNZBCH1.3.5"/>
+                            <ruleml:Var>X</ruleml:Var>
+                        </ruleml:Atom>
+                    </lrml:Obligation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <lrml:FactualStatement key="1.0.1.a">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom1">
+                    <ruleml:Rel iri=":housing"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.1.b">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom2">
+                    <ruleml:Rel iri=":communalResidential"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.1.c">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom3">
+                    <ruleml:Rel iri=":communalNon-residential"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.1.d">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom4">
+                    <ruleml:Rel iri=":commercialBuilding"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.1.e">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom5">
+                    <ruleml:Rel iri=":industrialBuilding"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.a">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom49">
+                    <ruleml:Rel iri=":housing"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.b">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom50">
+                    <ruleml:Rel iri=":communalResidential"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.c">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom51">
+                    <ruleml:Rel iri=":communalNon-residential"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.d">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom52">
+                    <ruleml:Rel iri=":commercialBuilding"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:FactualStatement key="1.0.e">
+            <lrml:hasTemplate>
+                <ruleml:Atom key=":atom53">
+                    <ruleml:Rel iri=":industrialBuilding"/>
+                    <ruleml:Var>X</ruleml:Var>
+                </ruleml:Atom>
+            </lrml:hasTemplate>
+        </lrml:FactualStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.1.g" under="#1.0.1.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.1.h" under="#1.0.1.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.1.i" under="#1.0.1.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.1.j" under="#1.0.1.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.g" under="#1.0.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.h" under="#1.0.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.i" under="#1.0.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.0.j" under="#1.0.z"/>
+        </lrml:OverrideStatement>
+        <lrml:OverrideStatement>
+            <lrml:Override over="#1.1.1.c" under="#1.1.1.b"/>
+        </lrml:OverrideStatement>
+    </lrml:Statements>
+</lrml:LegalRuleML>
