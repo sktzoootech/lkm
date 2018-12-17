@@ -1,0 +1,5029 @@
+D1.1.<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ruleml="http://ruleml.org/spec" xsi:schemaLocation="http://docs.oasis-open.org/legalruleml/ns/v1.0/ ../../schemas/xsd/xsd-compact/lrml-compact.xsd">
+
+
+
+<lrml:Statements>
+
+<lrml:ConstitutiveStatement key="AccessibleBuilding">
+  <ruleml:Rule key="AccessibleBuilding">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.building"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessible"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessibleBuilding"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="AccessibleRamp">
+  <ruleml:Rule key="AccessibleRamp">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ramp"/>
+            <ruleml:Var>X</ruleml:Var>
+          </ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessible"/>
+            <ruleml:Var>X</ruleml:Var>
+          </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessibleRamp"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="AccessibleRoute">
+  <ruleml:Rule key="AccessibleRoute">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessible"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessibleRoute"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="AccessibleStairway">
+  <ruleml:Rule key="AccessibleStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessible"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessibleStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:PrescriptiveStatement key="aux1">
+  <ruleml:Rule key="aux1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleBuilding" />
+          <ruleml:Var key="accessible_building">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+          <ruleml:Var key="accessible_stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.leadingOff"/>
+            <ruleml:Var keyref="#accessible_stairway" />
+            <ruleml:Var keyref="#accessible_route" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.Have"/>
+          <ruleml:Var keyref="#accessible_building" />
+          <ruleml:Var keyref="#accessible_stairway" />
+      </ruleml:Obligation>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:ConstitutiveStatement key="AccessibleUnit">
+  <ruleml:Rule key="AccessibleUnit">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.unit"/>
+            <ruleml:Var>X</ruleml:Var>
+          </ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessible"/>
+            <ruleml:Var>X</ruleml:Var>
+          </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accessibleUnit"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="CommonRamp">
+  <ruleml:Rule key="CommonRamp">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.ramp"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.common"/>
+              <ruleml:Var>X</ruleml:Var>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.accessibleRamp"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.serviceRamp"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.commonRamp"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="CommonStairway">
+  <ruleml:Rule key="CommonStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.common"/>
+              <ruleml:Var>X</ruleml:Var>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.accessibleStairway"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.privateStairway"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.serviceStairway"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+          </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.commonStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="CommunityBuilding">
+  <ruleml:Rule key="CommunityBuilding">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.building"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.common"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.communityBuilding"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="CommunityServiceBuilding">
+  <ruleml:Rule key="CommunityServiceBuilding">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.communityBuilding"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.service"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.communityServiceBuilding"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="CurvedStairway">
+  <ruleml:Rule key="CurvedStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.curved"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.curvedStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="MainEntrance">
+  <ruleml:Rule key="MainEntrance">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.entrance"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.main"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.mainEntrance"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="MainPrivateStairway">
+  <ruleml:Rule key="MainPrivateStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.privateStairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.main"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.mainPrivateStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="MajorProjection">
+  <ruleml:Rule key="MajorProjection">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.projection"/>
+          <ruleml:Ind>X</ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Neg>
+              <ruleml:Rel iri="buvo:nz.lit.minor"/>
+              <ruleml:Ind>X</ruleml:Ind>
+          </ruleml:Neg>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Rel iri="buvo:nz.lit.majorProjection"/>
+      <ruleml:Ind>X</ruleml:Ind>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="MinorPrivateStairway">
+  <ruleml:Rule key="MinorPrivateStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.privateStairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.minor"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.minorPrivateStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="MinorProjection">
+  <ruleml:Rule key="MinorProjection">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.projection"/>
+              <ruleml:Ind>X</ruleml:Ind>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.minor"/>
+              <ruleml:Ind>X</ruleml:Ind>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.minorProjection"/>
+            <ruleml:Ind>X</ruleml:Ind>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="PrivateStairway">
+  <ruleml:Rule key="PrivateStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.private"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.privateStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="SecondaryPrivateStairway">
+  <ruleml:Rule key="SecondaryPrivateStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.privateStairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.secondary"/>
+              <ruleml:Ind>X</ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.mainPrivateStairway"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Neg>
+                  <ruleml:Rel iri="buvo:nz.lit.minorPrivateStairway"/>
+                  <ruleml:Var>X</ruleml:Var>
+              </ruleml:Neg>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.secondaryPrivateStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="ServiceRamp">
+  <ruleml:Rule key="ServiceRamp">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.ramp"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.service"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.serviceRamp"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="ServiceStairway">
+  <ruleml:Rule key="ServiceStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.service"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.serviceStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="SpiralStairway">
+  <ruleml:Rule key="SpiralStairway">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.stairway"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.spiral"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.spiralStairway"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:ConstitutiveStatement key="TaperedTread">
+  <ruleml:Rule key="TaperedTread">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+        <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.tread"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+              <ruleml:Atom iri="buvo:nz.lit.tapered"/>
+              <ruleml:Var>X</ruleml:Var>
+            </ruleml:Atom>
+        </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.taperedTread"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.1.1">
+  <ruleml:Rule key="D1.1.1.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute"/>
+          <ruleml:Var key="accessible_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.mainEntrance"/>
+          <ruleml:Var key="main_entrance">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.building"/>
+          <ruleml:Var key="building">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of"/>
+            <ruleml:Var keyref="#main_entrance" />
+            <ruleml:Var keyref="#building" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.PracticalAccess"/>
+            <ruleml:Var keyref="#accessible_route" />
+            <ruleml:Var keyref="#main_entrance" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:DirectAccessTo" />
+          <ruleml:Var keyref="#accessible_route" />
+          <ruleml:Var keyref="#main_entrance" />
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.1.1.exception">
+  <ruleml:Rule key="D1.1.1.1.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute"/>
+          <ruleml:Var key="main_accessible_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.alternativeRoute"/>
+          <ruleml:Var key="alternative_route">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.mainEntrance"/>
+          <ruleml:Var key="main_entrance">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.building"/>
+          <ruleml:Var key="building">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of"/>
+            <ruleml:Var keyref="#main_entrance" />
+            <ruleml:Var keyref="#building" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Neg>
+            <ruleml:Rel iri="buvo:nz.lit.PracticalAccess"/>
+              <ruleml:Var keyref="#main_accessible_route" />
+              <ruleml:Var keyref="#main_entrance" />
+          </ruleml:Neg>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:AccessToSpaceServedBy" />
+              <ruleml:Var keyref="#alternative_route" />
+              <ruleml:Var keyref="#main_entrance" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:ComplyWith" />
+              <ruleml:Var keyref="#alternative_route" />
+              <ruleml:Var keyref="#NZBC_F8" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.1.1.exception" under="D1.1.1.1"/>
+</lrml:OverrideStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.1.2">
+  <ruleml:Rule key="D1.1.1.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Fun iri="buvo:BeingPartOf">
+          <ruleml:Fun iri="lovo:GreaterThan">
+            <ruleml:Rel iri="buvo:nz.lit.building"/>
+            <ruleml:Ind> |X| </ruleml:Ind>
+            <ruleml:Data xsi:type="xs:decimal">
+              1.00
+            </ruleml:Data>
+          </ruleml:Fun>
+          <ruleml:Rel iri="buvo:nz.lit.singleComplex"/>
+        </ruleml:Fun>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.1.2.aux1">
+            Accessible routes that do not deviate substantially from the convenient or direct route commonly used
+          </ruleml:Rel>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:ConstitutiveStatement key="aux2">
+  <ruleml:Rule key="aux2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.receptionArea"/>
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+        <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.communalFacility"/>
+            <ruleml:Var>X</ruleml:Var>
+        </ruleml:Atom>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.1.3">
+  <ruleml:Rule key="D1.1.1.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute"/>
+          <ruleml:Var key="accessible_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleUnit"/>
+          <ruleml:Var key="accessible_unit">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.communalFacility"/>
+          <ruleml:Var key="communal_facility">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.communityServiceBuilding"/>
+          <ruleml:Var key="community_service_building">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="ProvidedOf">
+            <ruleml:Var keyref="accessible_unit" />
+            <ruleml:Var keyref="community_service_building" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:ConnectTo">
+          <ruleml:Var keyref="#accessible_route" />
+          <ruleml:Var keyref="#accessible_unit" />
+          <ruleml:Var keyref="#communal_facility" />
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.1.5">
+  <ruleml:Rule key="D1.1.1.5">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <<ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.escapeRoute"/>
+          <ruleml:Var key="escape_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="PartOf">
+            <ruleml:Var keyref="access_route" />
+            <ruleml:Var keyref="escape_route" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+          <ruleml:Rel iri="buvo:ComplyWith"/>
+            <ruleml:Var keyref="access_route" />
+            <ruleml:Ind iri="buvo:nz.lit.NZBC_C4"/>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.2.2.a">
+  <ruleml:Rule key="D1.1.2.2.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:BeingSubjectTo">
+            <ruleml:Exp>
+              <ruleml:Or>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#access_route" />
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#accessible_route" />
+                </ruleml:Atom>
+              </ruleml:Or>
+            </ruleml:Exp>
+            <ruleml:Ind iri="buvo:nz.lit.wetting"/>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.CrossFallOf"/>
+              <ruleml:Or>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#access_route" />
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#accessible_route" />
+                </ruleml:Atom>
+              </ruleml:Or>
+            </ruleml:Exp>
+          <ruleml:Ind>1 in 100</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.2.2.a.exception">
+  <ruleml:Rule key="D1.1.2.2.a.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:BeingSubjectTo">
+            <ruleml:Exp>
+              <ruleml:Or>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#access_route" />
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#accessible_route" />
+                </ruleml:Atom>
+              </ruleml:Or>
+            </ruleml:Exp>
+            <ruleml:Rel iri="buvo:nz.lit.wetting"/>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:MadeTo">
+            <ruleml:Exp>
+              <ruleml:Or>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#access_route" />
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                  <ruleml:Var keyref="#accessible_route" />
+                </ruleml:Atom>
+              </ruleml:Or>
+            </ruleml:Exp>
+            <ruleml:Ind iri="buvo:nz.lit.D1.1.2.2.aux1">
+              drain water, such as timber decking or support tiles with 5 mm gaps.
+            </ruleml:Ind>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Neg>
+        <lrml:Obligation iri="devo:Achievement">
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.CrossFallOf"/>
+                <ruleml:Or>
+                  <ruleml:Atom>
+                    <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                    <ruleml:Var keyref="#access_route" />
+                  </ruleml:Atom>
+                  <ruleml:Atom>
+                    <ruleml:Fun iri="buvo:nz.lit.SurfaceOf"/>
+                    <ruleml:Var keyref="#accessible_route" />
+                  </ruleml:Atom>
+                </ruleml:Or>
+              </ruleml:Exp>
+            <ruleml:Ind>1 in 100</ruleml:Ind>
+          </ruleml:GreaterEqual>
+        </lrml:Obligation>
+      </ruleml:Neg>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.2.2.a.exception" under="D1.1.2.2.a"/>
+</lrml:OverrideStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.2.2.b">
+  <ruleml:Rule key="D1.1.2.2.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <<ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Rel iri="buvo:nz.lit.SteeperThan">
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+              <ruleml:Or>
+                <ruleml:Atom>
+                  <ruleml:Var key="#access_route"/>
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Var key="#accessible_route"/>
+                </ruleml:Atom>
+              </ruleml:Or>
+          </ruleml:Exp>
+          <ruleml:Ind>1:50</ruleml:Ind>
+        </ruleml:Rel>
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.2.2.c.i">
+  <ruleml:Rule key="D1.1.2.2.c.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.2.2.aux2">
+            Adjoining tiles or other flooring materials
+          </ruleml:Rel>
+          <ruleml:Var key="adj_tile1">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.2.2.aux2" />
+          <ruleml:Var key="adj_tile2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#adj_tile1">
+            <ruleml:Var keyref="#access_route">
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#adj_tile2">
+            <ruleml:Var keyref="#access_route">
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ShapeOf" />
+              <ruleml:Var keyref="#adj_tile1">
+          </ruleml:Exp>
+          <ruleml:Ind>Square edge</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ShapeOf" />
+              <ruleml:Var keyref="#adj_tile2">
+          </ruleml:Exp>
+          <ruleml:Ind>Square edge</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation>
+        <ruleml:Rel iri="buvo:nz.lit.VerticalVariation">
+          <ruleml:Var keyref="#adj_tile1">
+          <ruleml:Var keyref="#adj_tile2">
+          <ruleml:Ind>3 mm</ruleml:Ind>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.2.2.c.i">
+  <ruleml:Rule key="D1.1.2.2.c.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.2.2.aux2" />
+          <ruleml:Var key="adj_tile1">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.2.2.aux2" />
+          <ruleml:Var key="adj_tile2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#adj_tile1">
+            <ruleml:Var keyref="#access_route">
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#adj_tile2">
+            <ruleml:Var keyref="#access_route">
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ShapeOf" />
+              <ruleml:Var keyref="#adj_tile1">
+          </ruleml:Exp>
+          <ruleml:Ind>Bevelled edge</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ShapeOf" />
+              <ruleml:Var keyref="#adj_tile2">
+          </ruleml:Exp>
+          <ruleml:Ind>Bevelled edge</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.VerticalVariation">
+          <ruleml:Var keyref="#adj_tile1">
+          <ruleml:Var keyref="#adj_tile2">
+          <ruleml:Ind>5 mm</ruleml:Ind>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.3.1.a">
+  <ruleml:Rule key="D1.1.3.1.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux1">
+            Single isolated step
+          </ruleml:Rel>
+          <ruleml:Var key="single_isolated_step">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux2">
+            Change of level
+          </ruleml:Rel>
+          <ruleml:Var key="level_change">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Rel iri="buvo:nz.lit.D1.constructedAs" />
+          <ruleml:Var keyref="#level_change" />
+          <ruleml:Var keyref="#single_isolated_step" />
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.3.1.a.exception">
+  <ruleml:Rule key="D1.1.3.1.a.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux1">
+            Single isolated step
+          </ruleml:Rel>
+          <ruleml:Var key="single_isolated_step">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux2">
+            Change of level
+          </ruleml:Rel>
+          <ruleml:Var key="level_change">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Or>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.D1.householdUnit" />
+            <ruleml:Var>W</ruleml:Var>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux3">
+              Permitted by Paragraph 1.3.2
+            </ruleml:Rel>
+            <ruleml:Var>Z</ruleml:Var>
+          </ruleml:Atom>
+        </ruleml:Or>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Rel iri="buvo:nz.lit.D1.constructedAs" />
+          <ruleml:Var keyref="#level_change" />
+          <ruleml:Var keyref="#single_isolated_step" />
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.3.1.a.exception" under="D1.1.3.1.a"/>
+</lrml:OverrideStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.3.1.b">
+  <ruleml:Rule key="D1.1.3.1.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux2">
+            Change of level
+          </ruleml:Rel>
+          <ruleml:Var key="level_change">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.D1.complyWith" />
+          <ruleml:Exp>
+            <ruleml:Rel iri="buvo:nz.lit.D1.constructedAs" />
+              <ruleml:Var keyref="#level_change" />
+              <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+          <ruleml:Ind key="buvo:nz.lit.D1.Paragraph3.0" />
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.3.1.b.exception">
+  <ruleml:Rule key="D1.1.3.1.b.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux2">
+            Change of level
+          </ruleml:Rel>
+          <ruleml:Var key="level_change">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Or>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.D1.householdUnit" />
+            <ruleml:Var>W</ruleml:Var>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.D1.1.3.1.aux3">
+              Permitted by Paragraph 1.3.2
+            </ruleml:Rel>
+            <ruleml:Var>Z</ruleml:Var>
+          </ruleml:Atom>
+        </ruleml:Or>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Neg>
+        <lrml:Obligation iri="devo:Achievement">
+          <ruleml:Rel iri="buvo:nz.lit.D1.complyWith" />
+            <ruleml:Exp>
+              <ruleml:Rel iri="buvo:nz.lit.D1.constructedAs" />
+                <ruleml:Var keyref="#level_change" />
+                <ruleml:Var keyref="#ramp" />
+            </ruleml:Exp>
+            <ruleml:Ind key="buvo:nz.lit.D1.Paragraph3.0" />
+        </lrml:Obligation>
+      </ruleml:Neg>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.3.1.b.exception" under="D1.1.3.1.b"/>
+</lrml:OverrideStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.3.2">
+  <ruleml:Rule key="D1.1.3.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdFinishedSurface" />
+          <ruleml:Var key="threshold_finished_surface">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdWeatherStop" />
+          <ruleml:Var key="threshold_weather_stop">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProjectAbove" />
+            <ruleml:Var keyref="#threshold_weather_stop" />
+            <ruleml:Var keyref="#threshold_finished_surface" />
+          </ruleml:Exp>
+          <ruleml:Ind>20 mm</ruleml:Ind>
+        </ruleml:LessEqual>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Var keyref="#threshold_weather_stop" />
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.3.2.exception">
+  <ruleml:Rule key="D1.1.3.2.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdFinishedSurface" />
+          <ruleml:Var key="threshold_finished_surface">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdWeatherStop" />
+          <ruleml:Var key="threshold_weather_stop">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Greater>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProjectAbove" />
+            <ruleml:Var keyref="#threshold_weather_stop" />
+            <ruleml:Var keyref="#threshold_finished_surface" />
+          </ruleml:Exp>
+          <ruleml:Ind>20 mm</ruleml:Ind>
+        </ruleml:Greater>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Neg>
+        <lrml:Permission>
+          <ruleml:Var keyref="#threshold_weather_stop" />
+        </lrml:Permission>
+      </ruleml:Neg>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.3.2.exception" under="D1.1.3.2"/>
+</lrml:OverrideStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.3.2.i">
+  <ruleml:Rule key="D1.1.3.2.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdFinishedSurface" />
+          <ruleml:Var key="threshold_finished_surface">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.thresholdWeatherStop" />
+          <ruleml:Var key="threshold_weather_stop">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Greater>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProjectAbove" />
+            <ruleml:Var keyref="#threshold_weather_stop" />
+            <ruleml:Var keyref="#threshold_finished_surface" />
+          </ruleml:Exp>
+          <ruleml:Ind>20 mm</ruleml:Ind>
+        </ruleml:Greater>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">Z</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.DesignedAs">
+              <ruleml:Var keyref="#threshold_weather_stop" />
+              <ruleml:Var keyref="#ramp" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+              <ruleml:Var keyref="#ramp" />
+              <ruleml:Ind iri="buvo:nz.lit.Paragraph3.0" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.5.1">
+  <ruleml:Rule key="D1.1.5.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.minorProjection" />
+          <ruleml:Var key="minor_projection">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessiRoute" />
+          <ruleml:Var key="access_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.floorLevel" />
+          <ruleml:Var key="floor_level">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.floorLevel" />
+          <ruleml:Var key="floor_level">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.DesignedTo" />
+            <ruleml:Var keyref="#minor_projection" />
+            <ruleml:Ind iri="buvo:nz.lit.D1.1.5.1.aux1">
+              Minimise the risk of injuries or impact
+            </ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Or>
+          <ruleml:And>
+            <ruleml:GreaterThan>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.LocatedAbove" />
+                <ruleml:Var keyref="#minor_projection" />
+                <ruleml:Var keyref="#floor_level" />
+              </ruleml:Exp>
+              <ruleml:Ind>1600 mm</ruleml:Ind>
+            </ruleml:GreaterThan>
+            <ruleml:LessThan>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.ProjectInto" />
+                <ruleml:Var keyref="#minor_projection" />
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind>200 mm</ruleml:Ind>
+            </ruleml:LessThan>
+          </ruleml:And>
+          <ruleml:And>
+            <ruleml:GreaterThan>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.LocatedAbove" />
+                <ruleml:Var keyref="#minor_projection" />
+                <ruleml:Var keyref="#floor_level" />
+              </ruleml:Exp>
+              <ruleml:Ind>800 mm</ruleml:Ind>
+            </ruleml:GreaterThan>
+            <ruleml:LessThan>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.LocatedAbove" />
+                <ruleml:Var keyref="#minor_projection" />
+                <ruleml:Var keyref="#floor_level" />
+              </ruleml:Exp>
+              <ruleml:Ind>800 mm</ruleml:Ind>
+            </ruleml:LessThan>
+            <ruleml:LessThan>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.ProjectInto" />
+                <ruleml:Var keyref="#minor_projection" />
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind>60 mm</ruleml:Ind>
+            </ruleml:LessThan>
+          </ruleml:And>
+          <ruleml:LessThan>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.LocatedAbove" />
+              <ruleml:Var keyref="#minor_projection" />
+              <ruleml:Var keyref="#floor_level" />
+            </ruleml:Exp>
+            <ruleml:Ind>800 mm</ruleml:Ind>
+          </ruleml:LessThan>
+          <ruleml:LessThan>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.ProjectInto" />
+              <ruleml:Var keyref="#minor_projection" />
+              <ruleml:Var keyref="#access_route" />
+            </ruleml:Exp>
+            <ruleml:Ind>100 mm</ruleml:Ind>
+          </ruleml:LessThan>
+        </ruleml:And>
+        </ruleml:Or>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Permission>
+        <ruleml:Rel iri="buvo:nz.lit.Within">
+          <ruleml:Var keyref="#minor_projection" />
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RequiredClearWidthOf" />
+            <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+      </ruleml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:ConstitutiveStatement key="D1.1.5.2.a">
+  <ruleml:Rule key="D1.1.5.2.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail" />
+          <ruleml:Var key="handrail">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProjectAbove" />
+            <ruleml:Var keyref="#handrail" />
+            <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>100 mm</ruleml:Ind>
+        </ruleml:LessEqual>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.minorProjection" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:ConstitutiveStatement key="D1.1.5.2.b">
+  <ruleml:Rule key="D1.1.5.2.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail" />
+          <ruleml:Var key="handrail">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeCentre"/>
+          <ruleml:Var keyref="#handrail" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="mading">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProjectAbove" />
+            <ruleml:Var keyref="#handrail" />
+            <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Ind>300 mm</ruleml:Ind>
+        </ruleml:LessEqual>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.minorProjection" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.5.2.b" under="D1.1.5.2.a"/>
+</lrml:OverrideStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.5.3">
+  <ruleml:Rule key="D1.1.5.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.majorProjection" />
+          <ruleml:Var key="major_projection1">X1</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.majorProjection" />
+          <ruleml:Var key="major_projection2">X2</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.wall" />
+          <ruleml:Var key="wall">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ProvidedBetween"/>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.ClearWidthOf" />
+            <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.FaceOf" />
+            <ruleml:Var keyref="#major_projection1" />
+          </ruleml:Exp>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.FaceOf" />
+            <ruleml:Var keyref="#major_projection2" />
+          </ruleml:Exp>
+        </ruleml:Atom>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.DesignedTo" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvonz.lit.TranstionBetween" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvonz.lit.FaceOf" />
+                  <ruleml:Var keyref="#wall" />
+              </ruleml:Exp>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvonz.lit.FaceOf" />
+                  <ruleml:Var keyref="#major_projection1" />
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind iri="buvo:nz.lit.D1.1.5.3.aux1">
+              Minimise the risk of injury by impact
+            </ruleml:Ind>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.DesignedTo" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvonz.lit.TranstionBetween" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvonz.lit.FaceOf" />
+                  <ruleml:Var keyref="#wall" />
+              </ruleml:Exp>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvonz.lit.FaceOf" />
+                  <ruleml:Var keyref="#major_projection2" />
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind iri="buvo:nz.lit.D1.1.5.3.aux1">
+              Minimise the risk of injury by impact
+            </ruleml:Ind>
+          </ruleml:Atom>
+        </ruleml:And>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Var keyref="#major_projection1" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Var keyref="#major_projection2" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+<lrml:ConstitutiveStatement key="D1.aux3">
+  <ruleml:Rule key="D1.aux3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.window" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.dangerousObstruction" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:ConstitutiveStatement key="D1.aux4">
+  <ruleml:Rule key="D1.aux4">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.fitting" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.dangerousObstruction" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:ConstitutiveStatement key="D1.aux5">
+  <ruleml:Rule key="D1.aux5">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.handrail" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.protection" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:ConstitutiveStatement key="D1.aux6">
+  <ruleml:Rule key="D1.aux6">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.guard-rail" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.protection" />
+        <ruleml:Var>X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:ConstitutiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.5.4.prohibition">
+  <ruleml:Rule key="D1.1.5.4.prohibition">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.dangerousObstruction" />
+          <ruleml:Var key="dangerous_obstruction">W</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ProjectInto" />
+            <ruleml:Var keyref="#dangerous_obstruction" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SpaceAdjacentTo"/>
+              <ruleml:Var keyref="#access_route" />
+            </ruleml:Exp>
+        </ruleml:Atom>
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.5.4.a">
+  <ruleml:Rule key="D1.1.5.4.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.user" />
+          <ruleml:Var key="user">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.dangerousObstruction" />
+          <ruleml:Var key="dangerous_obstruction">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.kerb" />
+          <ruleml:Var key="kerb">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeProtectedFromBy" />
+            <ruleml:Var keyref="#user" />
+            <ruleml:Var keyref="#dangerous_obstruction" />
+            <ruleml:Var keyref="#kerb" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.ProvidedAt"/>
+            <ruleml:Var keyref="#kerb" />
+          </ruleml:Exp>
+          <ruleml:Ind>Floor level</ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.DefinedBy" />
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:.nz.lit.ExtentOf"/>
+            <ruleml:Var keyref="#dangerous_obstruction" />
+          </ruleml:Exp>
+          <ruleml:Var keyref="#kerb" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ProjectInto" />
+            <ruleml:Var keyref="#dangerous_obstruction" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SpaceAdjacentTo"/>
+              <ruleml:Var keyref="#access_route" />
+            </ruleml:Exp>
+        </ruleml:Atom>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.5.4.a" under="D1.1.5.4.prohibition"/>
+</lrml:OverrideStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.5.4.b">
+  <ruleml:Rule key="D1.1.5.4.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.user" />
+          <ruleml:Var key="user">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.dangerousObstruction" />
+          <ruleml:Var key="dangerous_obstruction">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.protection" />
+          <ruleml:Var key="protection">z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.litProvidedAt"/>
+            <ruleml:Var keyref="#protection" />
+          </ruleml:Exp>
+          <ruleml:Ind>Sill level</ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeProtectedFromBy" />
+            <ruleml:Var keyref="#user" />
+            <ruleml:Var keyref="#dangerous_obstruction" />
+            <ruleml:Var keyref="#protection" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ProjectInto" />
+            <ruleml:Var keyref="#dangerous_obstruction" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SpaceAdjacentTo"/>
+              <ruleml:Var keyref="#access_route" />
+            </ruleml:Exp>
+        </ruleml:Atom>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.5.4.b" under="D1.1.5.4.prohibition"/>
+</lrml:OverrideStatement>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.5.5.prohibition">
+  <ruleml:Rule key="D1.1.5.5.prohibition">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.column" />
+          <ruleml:Var key="column">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.building" />
+          <ruleml:Var key="building">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#column" />
+          </ruleml:Exp>
+          <ruleml:Ind>Isolated</ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp iri="buvo:nz.lit.Accessing" />
+            <ruleml:Var keyref="#access_route" />
+            <ruleml:Var keyref="#building" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Atom>
+          <ruleml:Exp iri="buvo:nz.lit.In" />
+            <ruleml:Var keyref="#column" />
+            <ruleml:Var keyref="#access_route" />
+        </ruleml:Atom>
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.5.5.i">
+  <ruleml:Rule key="D1.1.5.5.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.column" />
+          <ruleml:Var key="column">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.clearPassage" />
+          <ruleml:Var key="clear_passage">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.building" />
+          <ruleml:Var key="building">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#column" />
+          </ruleml:Exp>
+          <ruleml:Ind>Isolated</ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp iri="buvo:nz.lit.Accessing" />
+            <ruleml:Var keyref="#access_route" />
+            <ruleml:Var keyref="#building" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp iri="buvo:nz.lit.CanBeReadilySeenDuringNormalUseOf" />
+            <ruleml:Var keyref="#column" />
+            <ruleml:Var keyref="#building" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Atom>
+          <ruleml:Exp iri="buvo:nz.lit.In" />
+            <ruleml:Var keyref="#column" />
+            <ruleml:Var keyref="#access_route" />
+        </ruleml:Atom>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.5.5.i" under="D1.1.5.5.prohibition"/>
+</lrml:OverrideStatement>
+
+<lrml:PrescriptiveStatement key="D1.1.5.5.i">
+  <ruleml:Rule key="D1.1.5.5">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.accassibleRoute"/>
+            <ruleml:Ind>K</ruleml:Ind>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Fun iri="CanBeEasilyDuringNormalUsageOf">
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.column"/>
+                <ruleml:Ind>X</ruleml:Ind>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.building"/>
+                <ruleml:Ind>W</ruleml:Ind>
+              </ruleml:Atom>
+            </ruleml:Fun>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Fun iri="IsAvailableOn">
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.D1.1.5.5.aux3">
+                  A clear passage of no less than 1200 mm
+                </ruleml:rel>
+                <ruleml:Ind>Z</ruleml:Ind>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Fun iri="Of">
+                  <ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.D1.1.5.5.aux4">
+                      At least on side
+                    </ruleml:rel>
+                  </ruleml:Atom>
+                  <ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.accassibleRoute"/>
+                    <ruleml:Ind>K</ruleml:Ind>
+                  </ruleml:Atom>
+                </ruleml:Fun>
+            </ruleml:Atom>
+            </ruleml:Fun>
+          </ruleml:Atom>
+        </ruleml:And>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Atom>
+          <ruleml:Fun iri="In">
+            <ruleml:Atom>
+              <ruleml:Fun iri="Be">
+                <ruleml:Atom>
+                  <ruleml:Rel iri="buvo:nz.lit.column"/>
+                  <ruleml:Ind>X</ruleml:Ind>
+                </ruleml:Atom>
+                <ruleml:Atom>
+                  <ruleml:Rel iri="buvo:nz.lit.isolated"/>
+                </ruleml:Atom>
+              </ruleml:Fun>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+              <ruleml:Ind>Y</ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Fun>
+        </ruleml:Atom>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.1.5.5.ii" under="D1.1.5.5.prohibition"/>
+</lrml:OverrideStatement>
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.1.6.1">
+  <ruleml:Rule key="D1.1.6.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail"/>
+          <ruleml:Var key="handrail">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.NZBC_B1"/>
+          <ruleml:Var key="NZBC_B1">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Have" />
+          <ruleml:Var keyref="#access_route" />
+          <ruleml:Var keyref="#handrail" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+              <ruleml:Var keyref="#access_route" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.StrengthRequirementsOf" />
+                <ruleml:Var keyref="#NZBC_B1"/>
+              </ruleml:Exp>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+              <ruleml:Var keyref="#access_route" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.StiffnessRequirementsOf" />
+                <ruleml:Var keyref="#NZBC_B1"/>
+              </ruleml:Exp>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.7.1">
+  <ruleml:Rule key="D1.1.7.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.barrier" />
+          <ruleml:Var key="barrier">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.PreventFallingFrom" />
+            <ruleml:Var keyref="#barrier" />
+            <ruleml:Var keyref="#access_route" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+            <ruleml:Var keyref="#barrier" />
+            <ruleml:Ind keyref="buvo:nz.lit.NZBC_F4" />
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.1.8.1">
+  <ruleml:Rule key="D1.1.8.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.artificialLighting" />
+          <ruleml:Var key="artificial_lighting">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeProvidedAlong" />
+            <ruleml:Var keyref="#artificial_lighting" />
+            <ruleml:Var keyref="#access_route" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+            <ruleml:Var keyref="#artificial_lighting" />
+            <ruleml:Ind keyref="buvo:nz.lit.NZBC_G8" />
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.2">
+  <ruleml:Rule key="D1.2.1.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>level</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#accessible_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>level</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="#access_route">
+            <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux1">
+              become wet with water in normal use
+            </ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="#accessible_route">
+            <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux1">
+              become wet with water in normal use
+            </ruleml:Ind>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Or>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Have" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux2">
+                an SRV classification of not less than 39 from the wet pendulum test method of AS 4586 Appendix A using the Slider 96 rubber
+              </ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Use" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux3">
+                The materials listed in Table 2 as `acceptable wet slip'
+              </ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+          <ruleml:Or>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Have" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#accessible_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux2">
+                an SRV classification of not less than 39 from the wet pendulum test method of AS 4586 Appendix A using the Slider 96 rubber
+              </ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Use" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#accessible_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux3">
+                The materials listed in Table 2 as `acceptable wet slip'
+              </ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.2.exception">
+  <ruleml:Rule key="D1.2.1.2.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRoute" />
+          <ruleml:Var key="accessible_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.householdUnit" />
+          <ruleml:Var key="household_unit">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.entrance" />
+          <ruleml:Var key="main_entrance">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.entrance" />
+          <ruleml:Var key="secondary_entrance">J</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>level</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#accessible_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>level</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="#access_route">
+            <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux1">
+              become wet with water in normal use
+            </ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="#accessible_route">
+            <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux1">
+              become wet with water in normal use
+            </ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Type" />
+            <ruleml:Var keyref="#main_entrance">
+            <ruleml:Ind iri="buvo:nz.lit.main"/>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#main_entrance">
+            <ruleml:Ind iri="household_unit"/>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#secondary_entrance">
+            <ruleml:Ind iri="household_unit"/>
+        </ruleml:Atom>
+        <ruleml:Neg>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.Type" />
+              <ruleml:Var keyref="#secondary_entrance">
+              <ruleml:Ind iri="buvo:nz.lit.main"/>
+          </ruleml:Atom>
+        </ruleml:Neg>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.LocatedOnTheApproachTo" />
+            <ruleml:Var keyref="#access_route">
+            <ruleml:Ind iri="main_entrance"/>
+        </ruleml:Atom>
+        <ruleml:Neg>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.LocatedInside" />
+              <ruleml:Var keyref="#access_route">
+              <ruleml:Ind iri="main_entrance"/>
+          </ruleml:Atom>
+        </ruleml:Neg>
+        <ruleml:Neg>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.LocatedOnTheApproachTo" />
+              <ruleml:Var keyref="#access_route">
+              <ruleml:Ind iri="secondary_entrance"/>
+          </ruleml:Atom>
+        </ruleml:Neg>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Or>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Have" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux2">
+                an SRV classification of not less than 39 from the wet pendulum test method of AS 4586 Appendix A using the Slider 96 rubber
+              </ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Use" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux3">
+                The materials listed in Table 2 as `acceptable wet slip'
+              </ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+          <ruleml:Or>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Have" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#accessible_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux2">
+                an SRV classification of not less than 39 from the wet pendulum test method of AS 4586 Appendix A using the Slider 96 rubber
+              </ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.Use" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf"/>
+                <ruleml:Var keyref="#accessible_route" />
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.2.aux3">
+                The materials listed in Table 2 as `acceptable wet slip'
+              </ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.2.1.2.exception.a" under="D1.2.1.2"/>
+</lrml:OverrideStatement>
+
+
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.2.1.2.exception.c" under="D1.2.1.2"/>
+</lrml:OverrideStatement>
+
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.3.i">
+  <ruleml:Rule key="D1.2.1.3.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.access_route" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.D1.2.1.3.aux2" />
+          <ruleml:Var key="friction_coefficient">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Be" />
+              <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>level</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="#accessible_route">
+            <ruleml:Rel iri="buvo:nz.lit.D1.2.1.3.aux1">
+              remain dry under normal use
+            </ruleml:Rel>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.Of" />
+            <ruleml:Var keyref="#friction_coefficient" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.MaterialOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WalkingSurfaceOf" />
+                  <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+            </ruleml:Exp>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.MeasureOf" />
+              <ruleml:Var keyref="#friction_coefficient" />
+            </ruleml:Exp>
+            <ruleml:Ind>0.40</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.BeTestedWith" />
+              <ruleml:Var keyref="#friction_coefficient" />
+              <ruleml:Ind iri="buvo:nz.lit.D1.2.1.3.aux3">
+                friction test method of AS 4586 Appendix B
+              </ruleml:Ind>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.3.ii">
+  <ruleml:Rule key="D1.2.1.3.ii">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:And>
+          <ruleml:Atom>
+            <reluml:Fun iri="ExpectedTo">
+              <ruleml:Atom>
+                <ruleml:Fun iri="Be">
+                  <ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+                    <ruleml:Ind>X</ruleml:Ind>
+                  </ruleml:Atom>
+                  <ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.level"/>
+                  </ruleml:Atom>
+                </ruleml:Fun>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.D1.2.1.3.aux1">
+                  remain dry under normal use
+                </ruleml:Rel>
+              </ruleml:Atom>
+            </reluml:Fun>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Fun iri="Of">
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.walkingSurface"/>
+                <ruleml:Ind>Z</ruleml:Ind>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+                <ruleml:Ind>X</ruleml:Ind>
+              </ruleml:Atom>
+            </ruleml:Fun>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Fun iri="DefinedAs">
+              <ruleml:Atom>
+                <ruleml:Fun iri="Of">
+                  <ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.material"/>
+                    <ruleml:Ind>Y</ruleml:Ind>
+                  </ruleml:Atom>
+                    <ruleml:Rel iri="buvo:nz.lit.walkingSurface"/>
+                    <ruleml:Ind>Z</ruleml:Ind>
+                  <ruleml:Atom>
+                  </ruleml:Atom>
+                </ruleml:Fun>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.D1.2.1.3.aux3">
+                  `acceptable dry slip' material in Table 2
+                </ruleml:Rel>
+              </ruleml:Atom>
+            </ruleml:Fun>
+          </ruleml:Atom>
+        </ruleml:And>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Atom>
+          <ruleml:Fun iri="Madeof">
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+              <ruleml:Ind>X</ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel iri="buvo:nz.lit.material"/>
+              <ruleml:Ind>Y</ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Fun>
+        </ruleml:Atom>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.4">
+  <ruleml:Rule key="D1.2.1.4">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.building" />
+          <ruleml:Var key="building">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.walkingSurface" />
+          <ruleml:Var key="walking_surface">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Or>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.UsageOfBuilding" />
+              <ruleml:Var keyref="#building" />
+            </ruleml:Exp>
+            <ruleml:Ind>Industrial</ruleml:Ind>
+          </ruleml:Equal>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.UsageOfBuilding" />
+              <ruleml:Var keyref="#building" />
+            </ruleml:Exp>
+            <ruleml:Ind>Commercial</ruleml:Ind>
+          </ruleml:Equal>
+        </ruleml:Or>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeExpectedTo" />
+            <ruleml:Var keyref="walking_surface">
+            <ruleml:Rel iri="buvo:nz.lit.D1.2.1.4.aux1">
+              be contaminated by oils
+            </ruleml:Rel>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.MethodToDetermine"/>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.SlipResistanceOf" />
+                <ruleml:Var keyref="walking_surface">
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.AS_4586" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.MethodToDetermine"/>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.Slip-inducingMaterialsOf" />
+                <ruleml:Var keyref="walking_surface">
+              </ruleml:Exp>
+              <ruleml:Ind iri="buvo:nz.lit.AS_4586" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.5">
+  <ruleml:Rule key="D1.2.1.5">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.TypeOfSurfaceOf" />
+            <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+          <ruleml:Ind>Slope</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Olbigation iri="devo:Punctual">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ClassifiedBy" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SlipCoefficientOf"/>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WlkingSurfaceOf" />
+                <ruleml:Var keyref="#access_route" />
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind iri="buvo:nz.lit.AS_4586_Appendix_F" />
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.2.1.6">
+  <ruleml:Rule key="D1.2.1.6">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+        <ruleml:Var key="access_route">X</ruleml:Var>
+      </ruleml:Atom>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeProvidedWith" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.TransitZoneBetween" />
+              <ruleml:Exp>
+                <ruleml:Rel iri="buvo:nz.lit.PartOf" />
+                  <ruleml:Var keyref="#access_route" />
+                  <rleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux3">
+                    Intended to reman dry under normal usage
+                  </ruleml:Ind>
+              </ruleml:Exp>
+              <ruleml:Exp>
+                <ruleml:Rel iri="buvo:nz.lit.PartOf" />
+                  <ruleml:Var keyref="#access_route" />
+                  <rleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux4">
+                    may become wet during normal usage
+                  </ruleml:Ind>
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Or>
+              <ruleml:Atom>
+                <ruleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux1">
+                  Water absorbent matting across the width of the effective walkway with a sufficient dimension in the direction of the pedestrian traffic to remove water which may be tracked by footwear
+                </ruleml:Ind>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux2">
+                  An extension of the wet slip resistant walking surface for sufficient distance from the point at which water can be tracked indoors (normally from the entrance portal) to allow water to be shed from footwear
+                </ruleml:Ind>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo.nz.lit.CombinationOf" />
+                  <ruleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux1">
+                    Water absorbent matting across the width of the effective walkway with a sufficient dimension in the direction of the pedestrian traffic to remove water which may be tracked by footwear
+                  </ruleml:Ind>
+                  <ruleml:Ind iri="buvo:nz.lit.D1.2.1.6.aux2">
+                    An extension of the wet slip resistant walking surface for sufficient distance from the point at which water can be tracked indoors (normally from the entrance portal) to allow water to be shed from footwear
+                  </ruleml:Ind>
+              </ruleml:Atom>
+            </ruleml:Or>
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.2.2.1">
+  <ruleml:Rule key="D1.2.2.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Fun iri="buvo:Of">
+        <ruleml:Rel iri="buvo:nz.lit.clearWidth"/>
+        <ruleml:Ind>X</ruleml:Ind>
+        <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+        <ruleml:Ind>Y</ruleml:Ind>
+      </ruleml:Fun>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Fun iri="lovo:GreaterEqualTo">
+          <ruleml:Rel iri="buvo:nz.lit.clearWidth"/>
+          <ruleml:Ind>X</ruleml:Ind>
+          <ruleml:Data xsi:type="xs:decimal">1200.0 mm</ruleml:Data>
+        </ruleml:Fun>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.2.3.1">
+  <ruleml:Rule key="D1.2.3.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Fun iri="buvo:Of">
+            <ruleml:Rel iri="buvo:nz.lit.surface"/>
+            <ruleml:Var>X</ruleml:Var>
+            <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+            <ruleml:Var>Y</ruleml:Var>
+          </ruleml:Fun>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Fun iri="buvo:BeingAboveWithRespectTo">
+            <ruleml:Rel iri="buvo:nz.lit.surface"/>
+            <ruleml:Var>X</ruleml:Var>
+            <ruleml:Data xsi:type="xs:decimal">25 mm</ruleml:Data>
+            <ruleml:Rel iri="buvo:nz.lit.D1.2.2.2.aux1"/>
+            the adjacent ground</ruleml:Rel>
+            <ruleml:Var>W</ruleml:Var>
+          </ruleml:Fun>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Fun iri="buvo:Of">
+          <ruleml:Fun iri="buvo:Being">
+            <ruleml:Rel iri="buvo:nz.lit.protection"/>
+            <ruleml:Var>Z</ruleml:Var>
+            <ruleml:Or>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.D1.2.2.2.aux2"/>
+                75 mm upstand (kerb)</ruleml:Rel>
+                <ruleml:Var>Z</ruleml:Var>
+              </ruleml:Atom>
+              <ruleml:Atom>
+                <ruleml:Rel iri="buvo:nz.lit.D1.2.2.2.aux3"/>
+                lower barrier rail</ruleml:Rel>
+                <ruleml:Var>Z</ruleml:Var>
+              </ruleml:Atom>
+            </ruleml:Or>
+          </ruleml:Fun>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute"/>
+          <ruleml:Var>Y</ruleml:Var>
+        </ruleml:Fun>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+<lrml:PrescriptiveStatement key="D1.3.1.1">
+  <ruleml:Rule key="D1.3.1.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SlopeOf" />
+            <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+        <ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.complyWith"/>
+        <ruleml:Exp>
+          <rulem:Fun iri="buvo:nz.lit.NumberOf" />
+            <rulem:Fun iri="buvo:nz.lit.SlopeOf" />
+            <ruleml:Var keyref="#ramp" />
+        </ruleml:Exp>
+        <ruleml:Ind iri="buvo:nz.lit.Table3" />
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.3.1.1.i">
+  <ruleml:Rule key="D1.3.1.1.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SlopeOf" />
+            <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+        <ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.takingIntoAccount"/>
+        <ruleml:Exp>
+          <rulem:Fun iri="buvo:nz.lit.SlopeOf" />
+          <ruleml:Var keyref="#ramp" />
+        </ruleml:Exp>
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Ind iri="buvo:nz.lit.D1.3.1.1.aux1">
+              type of usage
+            </ruleml:Ind>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Ind iri="buvo:nz.lit.D1.3.1.1.aux2">
+              risk of slipping
+            </ruleml:Ind>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.1.2">
+  <ruleml:Rule key="D1.3.1.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.serviceRamp" />
+          <ruleml:Var key="service_ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.steeperThan"/>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.FootholdOf" />
+            <ruleml:Var keyref="#service_ramp" />
+          </ruleml:Exp>
+          <ruleml:Ind iri="buvo:nz.lit.D1.3.1.2.aux1"/>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Rel iri="buvo:nz.lit.ComplyWith"/>
+          <ruleml:Var keyref="#service_ramp" />
+          <ruleml:And>
+            <ruleml:Atom>
+              <ruleml:Ind iri="buvo:nz.lit.D1.Figure8"/>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Ind iri="buvo:nz.lit.Table4"/>
+            </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.1.3">
+  <ruleml:Rule key="D1.3.1.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      </ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.accessibleRamp" />
+        <ruleml:Var key="accessible_ramp">X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.HeightOn" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.UpstandOf" />
+              <ruleml:Var keyref="#accessible_ramp" />
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.Drop-offSideOf" />
+              <ruleml:Var keyref="#accessible_ramp" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>75 mm</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.1.4">
+  <ruleml:Rule key="D1.3.1.4">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        </ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeSlipResistent"/>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+            <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ComplyWith"/>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+            <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+          <ruleml:Ind iri="buvo:nz.lit.Table2">
+            Table 2
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+
+      <ruleml:Exp>
+        <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+        <ruleml:Var keyref="#ramp" />
+      </ruleml:Exp>
+
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.2">
+  <ruleml:Rule key="D1.3.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      </ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.accessibleRamp" />
+        <ruleml:Var key="accessible_ramp">X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.ClearWidthOf" />
+            <ruleml:Var keyref="#accessible_ramp" />
+          </ruleml:Exp>
+          <ruleml:Ind>1200 mm</ruleml:Ind>
+        </ruleml:Equal>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.3.1.i">
+  <ruleml:Rule key="D1.3.3.1.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:And>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.BeLevel"/>
+              <ruleml:Var keyref="#landing" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.BeProvided"/>
+              <ruleml:Var keyref="#landing" />
+              <ruleml:And>
+                <ruleml:Atom>
+                  <ruleml:Exp>
+                    <rulem:Fun iri="buvo:nz.lit.TopOf" />
+                    <ruleml:Var keyref="#ramp" />
+                  </ruleml:Exp>
+                <ruleml:Atom>
+                  <ruleml:Atom>
+                    <ruleml:Exp>
+                      <rulem:Fun iri="buvo:nz.lit.BottomOf" />
+                      <ruleml:Var keyref="#ramp" />
+                    </ruleml:Exp>
+                  <ruleml:Atom>
+              </ruleml:And>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.3.1.ii">
+  <ruleml:Rule key="D1.3.3.1.ii">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.SteeperThan"/>
+            <ruleml:Var keyref="#ramp" />
+            <ruleml:Ind iri="buvo:nz.lit.D1.3.3.1.aux1">
+              1 in 33
+            </ruleml:Ind>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.landing" />
+            <ruleml:Var key="landingY">Y</ruleml:Var>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.landing" />
+            <ruleml:Var key="landingZ">Z</ruleml:Var>
+          </ruleml:Atom>
+          <!-- devo mettere una quantificazione? Servono sia Y che Z? Devo mettere che Y diverso da Z? -->
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.Be"/>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.VerticalDinstanceBetween" />
+              <ruleml:Var keyref="#landingY" />
+              <ruleml:Var keyref="#landingZ" />
+            </ruleml:Exp>
+            <ruleml:Ind>750 mm</ruleml:Ind>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.3.2">
+  <ruleml:Rule key="D1.3.3.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="ramp">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <rulem:Fun iri="buvo:nz.lit.Serve" />
+          <ruleml:Var keyref="#landing" />
+          <ruleml:Var keyref="#ramp" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.Width" />
+            <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MinimumWidth" />
+            <ruleml:Var keyref="#ramp" />
+          </ruleml:Exp>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.3.3">
+  <ruleml:Rule key="D1.3.3.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleRamp" />
+          <ruleml:Var key="accessible_ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="ramp">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <rulem:Fun iri="buvo:nz.lit.Serve" />
+          <ruleml:Var keyref="#landing" />
+          <ruleml:Var keyref="#accessible_ramp" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.LengthOf" />
+            <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Ind>1200 mm</ruleml:Ind> <!-- Table 5 -->
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.3.4.1">
+  <ruleml:Rule key="D1.3.4.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.kerbRamp" />
+          <ruleml:Var key="kerb_ramp">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.footpath" />
+          <ruleml:Var key="footpath">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.adjacent"/>
+            <ruleml:Var keyref="#kerb_ramp" />
+            <ruleml:Var keyref="#footpath" />
+        <ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.contrast"/>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+              <ruleml:Var keyref="#kerb_ramp" />
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+              <ruleml:Var keyref="#footpath" />
+            </ruleml:Exp>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.contrast"/>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TextureOf" />
+              <ruleml:Var keyref="#kerb_ramp" />
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TextureOf" />
+              <ruleml:Var keyref="#footpath" />
+            </ruleml:Exp>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.1">
+  <ruleml:Rule key="D1.4.1.1">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+
+
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+
+
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.2.ii">
+  <ruleml:Rule key="D1.4.1.2.ii">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.Located" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Outside</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.FormedBy" />
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.LandingOn" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind iri="buvo:nz.lit.D1.4.1.2.aux1">
+            ground sloping across the width of the flight
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.BeMeasuredAt" />
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.RiseOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind iri="buvo:nz.lit.D1.4.1.2.aux2">
+            mid-width
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.3">
+  <ruleml:Rule key="D1.4.1.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+
+
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+Slip resistant surfaces complying with Table 2.
+
+<lrml:PrescriptiveStatement key="D1.4.1.4.i">
+  <ruleml:Rule key="D1.4.1.4.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.privateStairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Service</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Minor</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.DepthOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>220 mm</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SurfaceOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>level</ruleml:Ind>
+          </ruleml:Equal>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.1.4.ii">
+  <ruleml:Rule key="D1.4.1.4.ii">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.privateStairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Secondary</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.DepthOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>250 mm</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SurfaceOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>level</ruleml:Ind>
+          </ruleml:Equal>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.1.4.iii">
+  <ruleml:Rule key="D1.4.1.4.iii">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.privateStairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Common</ruleml:Ind>
+        </ruleml:Equal>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Main</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.DepthOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>280 mm</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SurfaceOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>level</ruleml:Ind>
+          </ruleml:Equal>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.1.4.iv">
+  <ruleml:Rule key="D1.4.1.4.iv">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Var keyref="#stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind>Accessible</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.DepthOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>310 mm</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.SurfaceOf" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.ThreadOf" />
+                    <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Ind>level</ruleml:Ind>
+          </ruleml:Equal>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.5">
+  <ruleml:Rule key="D1.4.1.5">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.serviceStairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Less>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.DepthOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>250 mm</ruleml:Ind>
+        </ruleml:Less>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>Open</ruleml:Ind>
+        </ruleml:Equal>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.6.a">
+  <ruleml:Rule key="D1.4.1.6.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>Open</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <Rruleml:And>
+          <ruleml:GreaterEqual>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.DimensionOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+                  <ruleml:Exp>
+                    <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                    <ruleml:Var keyref="#stairway" />
+                  </ruleml:Exp>
+                </ruleml:Exp>
+              </ruleml:Exp>
+            <ruleml:Ind>15 mm</ruleml:Ind>
+          </ruleml:GreaterEqual>
+          <ruleml:LessEqual>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.DimensionOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+                  <ruleml:Exp>
+                    <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                    <ruleml:Var keyref="#stairway" />
+                  </ruleml:Exp>
+                </ruleml:Exp>
+              </ruleml:Exp>
+            <ruleml:Ind>25 mm</ruleml:Ind>
+          </ruleml:LessEqual>
+        </Rruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.1.6.b">
+  <ruleml:Rule key="D1.4.1.6.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>Closed</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.DimensionOf" />
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                  <ruleml:Var keyref="#stairway" />
+                </ruleml:Exp>
+              </ruleml:Exp>
+            </ruleml:Exp>
+          <ruleml:Ind>25 mm</ruleml:Ind>
+        </ruleml:LessEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.7">
+  <ruleml:Rule key="D1.4.1.7">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RiserOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>Closed</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.LeadingEdgeOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                  <ruleml:Var keyref="#stairway" />
+                </ruleml:Exp>
+              </ruleml:Exp>
+            <ruleml:Ind>Rounded</ruleml:Ind>
+          </ruleml:Equal>
+          <ruleml:Neg>
+            <ruleml:Equal>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+                  <ruleml:Exp>
+                    <rulem:Fun iri="buvo:nz.lit.LeadingEdgeOf" />
+                      <ruleml:Exp>
+                        <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                        <ruleml:Var keyref="#stairway" />
+                      </ruleml:Exp>
+                  </ruleml:Exp>
+              </ruleml:Exp>
+              <ruleml:Exp>
+                <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+                  <ruleml:Exp>
+                    <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                    <ruleml:Var keyref="#stairway" />
+                  </ruleml:Exp>
+              </ruleml:Exp>
+            </ruleml:Equal>
+          </ruleml:Neg>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.8.a">
+  <ruleml:Rule key="D1.4.1.8.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <lrml:Obligation iri="devo:Maintenance">
+            <ruleml:Ind iri="buvo:nz.lit.D1.4.1.8.aux1">
+              To prevent children falling or becoming held fast
+            </ruleml:Ind>
+          </ruleml:Atom>
+          </lrml:Obligation>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.LocatedIn" />
+            <ruleml:Var keyref="#stairway" />
+            <ruleml:Ind iri="buvo:nz.lit.D1.4.1.8.aux2">
+              area frequented by children under 6 years of age
+            </ruleml:Ind>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.tread" />
+          <ruleml:Var key="tread1">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.tread" />
+          <ruleml:Var key="tread2">W</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.treadOf" />
+            <ruleml:Var keyref="#tread1" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.treadOf" />
+            <ruleml:Var keyref="#tread2" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Neg>
+          <ruleml:Equal>
+            <ruleml:Var keyref="#tread1" />
+            <ruleml:Var keyref="#tread2" />
+          </ruleml:Equal>
+        </ruleml:Neg>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.sphere" />
+          <ruleml:Var key="sphere">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Equal>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.treadOf" />
+              <ruleml:Var keyref="#sphere" />
+          </ruleml:Exp>
+          <ruleml:Ind>100 mm</ruleml:Ind>
+        </ruleml:Equal>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.PassageOf" />
+            <ruleml:Var keyref="#sphere" />
+            <ruleml:Exp>
+              <ruleml:Rel iri="buvo:nz.lit.spaceInBetween" />
+                <ruleml:Var keyref="#tread1" />
+                <ruleml:Var keyref="#tread2" />
+            </ruleml:Exp>
+        </ruleml:Atom>
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.1.8.b">
+  <ruleml:Rule key="D1.4.1.8.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+        <ruleml:Var key="stairway">X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Prohibition>
+        <ruleml:Equal>
+          <ruleml:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.RiserOf" />
+              <ruleml:Var keyref="#stairway" />
+            </ruleml:Exp>
+          <ruleml:Ind>Open</ruleml:Ind>
+        </ruleml:Equal>
+      </lrml:Prohibition>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.1.8.b.exception">
+  <ruleml:Rule key="D1.4.1.8.b.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.commonStairway" />
+          <ruleml:Var key="stairway1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+          <ruleml:Var key="stairway2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Neg>
+          <ruleml:Equal>
+            <ruleml:Var keyref="#stairway1" />
+            <ruleml:Var keyref="#stairway2" />
+          </ruleml:Equal>
+        </ruleml:Neg>
+        <ruleml:Neg>
+          <ruleml:Equal>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.LeadingEdgeOf" />
+                    <ruleml:Exp>
+                      <rulem:Fun iri="buvo:nz.lit.NosingOf" />
+                      <ruleml:Var keyref="#stairway1" />
+                    </ruleml:Exp>
+                </ruleml:Exp>
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.ColourOf" />
+                <ruleml:Exp>
+                  <rulem:Fun iri="buvo:nz.lit.TreadOf" />
+                  <ruleml:Var keyref="#stairway1" />
+                </ruleml:Exp>
+            </ruleml:Exp>
+          </ruleml:Equal>
+        </ruleml:Neg>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Equal>
+          <ruleml:Fun iri="buvo:nz.lit.TypeOf" />
+            <ruleml:Exp>
+              <ruleml:Fun iri="buvo:nz.lit.RiserOf" />
+              <ruleml:Var keyref="#stairway1" />
+            </ruleml:Exp>
+          <ruleml:Ind>Open</ruleml:Ind>
+        </ruleml:Equal>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.4.1.8.b.exception" under="D1.4.1.8.b"/>
+</lrml:OverrideStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.2.1.a">
+  <ruleml:Rule key="D1.4.2.1.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+          <ruleml:Var key="accessible_stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail" />
+          <ruleml:Var key="handrail1">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail" />
+          <ruleml:Var key="handrail2">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrailOn" />
+            <ruleml:Var keyref="#handrail1" />
+            <ruleml:Var keyref="#accessible_stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrailOn" />
+            <ruleml:Var keyref="#handrail2" />
+            <ruleml:Var keyref="#accessible_stairway" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.WidthBetween" />
+              <ruleml:Var keyref="#handrail1" />
+              <ruleml:Var keyref="#handrail2" />
+          </ruleml:Exp>
+          <ruleml:Ind>900 mm</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.2.1.b">
+  <ruleml:Rule key="D1.4.2.1.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.commonStairway" />
+          <ruleml:Var key="common_stairway">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrail" />
+          <ruleml:Var key="handrail">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.handrailOn" />
+            <ruleml:Var keyref="#handrail" />
+            <ruleml:Var keyref="#accessible_stairway" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.WidthBetween" />
+              <ruleml:Var keyref="#handrail" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.WallOn" />
+                  <ruleml:Var keyref="#common_stairway" />
+              </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>900 mm</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.1.a">
+  <ruleml:Rule key="D1.4.3.1.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairs" />
+          <ruleml:Var key="stairs">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheTopOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.FlightOf" />
+                  <ruleml:Var keyref="#stairs" />
+              </ruleml:Exp>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheBottomOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.FlightOf" />
+                  <ruleml:Var keyref="#stairs" />
+              </ruleml:Exp>
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.1.b">
+  <ruleml:Rule key="D1.4.3.1.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ramp" />
+          <ruleml:Var key="stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheTopOf" />
+              <ruleml:Var keyref="#ladder" />
+              <ruleml:Var keyref="#ramp" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheBottomOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Var keyref="#ramp" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.1.c">
+  <ruleml:Rule key="D1.4.3.1.c">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ladder" />
+          <ruleml:Var key="ladder">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheTopOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Var keyref="#ladder" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheBottomOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Var keyref="#ladder" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.1.d">
+  <ruleml:Rule key="D1.4.3.1.d">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairway" />
+          <ruleml:Var key="stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.doorOpenInto" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:And>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheTopOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Var keyref="#stairway" />
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedAtTheBottomOf" />
+              <ruleml:Var keyref="#landing" />
+              <ruleml:Var keyref="#stairway" />
+          </ruleml:Atom>
+        </ruleml:And>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.1.exception">
+  <ruleml:Rule key="D1.4.3.1.exception">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.stairs" />
+          <ruleml:Var key="stairs">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.RiseOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.FlightOf" />
+              <ruleml:Var keyref="#stairs" />
+          </ruleml:Exp>
+        </ruleml:Exp>
+        <ruleml:Ind>600 mm</ruleml:Ind>
+        </ruleml:LessEqual>
+        <ruleml:Or>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.SlidesAwayFrom" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.DoorOpensInto" />
+              <ruleml:Var keyref="#stairs" />
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.StepsOf" />
+              <ruleml:Var keyref="#stairs" />
+            </ruleml:Exp>
+          </ruleml:Atom>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.OpensAwayFrom" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.DoorOpensInto" />
+              <ruleml:Var keyref="#stairs" />
+            </ruleml:Exp>
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.StepsOf" />
+              <ruleml:Var keyref="#stairs" />
+            </ruleml:Exp>
+          </ruleml:Atom>
+        </ruleml:Or>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Permission>
+        <ruleml:Neg>
+          <ruleml:Atom>
+            <ruleml:Rel iri="buvo:nz.lit.ProvidedBetween" />
+              <ruleml:Var keyref="#landing">
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.FlightOf" />
+                  <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+              <ruleml:Exp>
+                <ruleml:Fun iri="buvo:nz.lit.DoorOpensInto" />
+                  <ruleml:Var keyref="#stairway">
+              </ruleml:Exp>
+          </ruleml:Atom>
+        </ruleml:Neg>
+      </lrml:Permission>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.4.3.1.exception" under="D1.4.3.1.a"/>
+</lrml:OverrideStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.4.3.1.exception" under="D1.4.3.1.b"/>
+</lrml:OverrideStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.4.3.1.exception" under="D1.4.3.1.c"/>
+</lrml:OverrideStatement>
+
+<lrml:OverrideStatement>
+  <lrml:Override over="D1.4.3.1.exception" under="D1.4.3.1.d"/>
+</lrml:OverrideStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.2.a">
+  <ruleml:Rule key="D1.4.3.2.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.privateStairway" />
+          <ruleml:Var key="stairway">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing2" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.beSuccessive" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#landing2" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MaximumRiseBetween" />
+              <ruleml:Var keyref="#landing1" />
+              <ruleml:Var keyref="#landing2" />
+          </ruleml:Exp>
+          <ruleml:Ind>4.0 m</ruleml:Ind>
+        </ruleml:LessEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.2.b">
+  <ruleml:Rule key="D1.4.3.2.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.serviceStairway" />
+          <ruleml:Var key="stairway">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing2" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.beSuccessive" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#landing2" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MaximumRiseBetween" />
+              <ruleml:Var keyref="#landing1" />
+              <ruleml:Var keyref="#landing2" />
+          </ruleml:Exp>
+          <ruleml:Ind>4.0 m</ruleml:Ind>
+        </ruleml:LessEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.2.c">
+  <ruleml:Rule key="D1.4.3.2.c">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.commonStairway" />
+          <ruleml:Var key="stairway">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing2" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.beSuccessive" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#landing2" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MaximumRiseBetween" />
+              <ruleml:Var keyref="#landing1" />
+              <ruleml:Var keyref="#landing2" />
+          </ruleml:Exp>
+          <ruleml:Ind>2.5 m</ruleml:Ind>
+        </ruleml:LessEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.3.2.d">
+  <ruleml:Rule key="D1.4.3.2.d">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessibleStairway" />
+          <ruleml:Var key="stairway">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landingOf" />
+            <ruleml:Var keyref="#landing2" />
+            <ruleml:Var keyref="#stairway" />
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.beSuccessive" />
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#landing2" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:LessEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MaximumRiseBetween" />
+              <ruleml:Var keyref="#landing1" />
+              <ruleml:Var keyref="#landing2" />
+          </ruleml:Exp>
+          <ruleml:Ind>2.5 m</ruleml:Ind>
+        </ruleml:LessEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.3">
+  <ruleml:Rule key="D1.4.3.3">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.accessRoute" />
+          <ruleml:Var key="access_route">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.serving"/>
+            <ruleml:Var keyref="#landing" />
+            <ruleml:Var keyref="#access_route" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.WidthOf" />
+              <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.MinimumWidthOf" />
+              <ruleml:Var keyref="#access_route" />
+          </ruleml:Exp>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.4">
+  <ruleml:Rule key="D1.4.3.4">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.landing" />
+        <ruleml:Var key="landing">X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.LengthOf" />
+              <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Ind>900 mm</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.5.a">
+  <ruleml:Rule key="D1.4.3.5.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:Atom>
+        <ruleml:Rel iri="buvo:nz.lit.landing" />
+        <ruleml:Var key="landing">X</ruleml:Var>
+      </ruleml:Atom>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <rulem:Rel iri="buvo:nz.lit.BeClearOf" />
+            <ruleml:Var keyref="#landing" />
+          <ruleml:Ind iri="buvo:nz.lit.D1.4.3.5.aux1">
+            any permanent obstruction
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.5.b">
+  <ruleml:Rule key="D1.4.3.5.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.door" />
+          <ruleml:Var key="door">Y</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.ClearSpaceOf" />
+              <ruleml:Var keyref="#landing" />
+          </ruleml:Exp>
+          <ruleml:Ind>400 mm</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.4.3.6">
+  <ruleml:Rule key="D1.4.3.6">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.landing" />
+          <ruleml:Var key="landing2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Greater>
+          <ruleml:Exp>
+            <ruleml:Fun iri="buvo:nz.lit.VerticalDistanceBetween"/>
+              <ruleml:Var keyref="#landing1" />
+              <ruleml:Var keyref="#landing2" />
+          </ruleml:Exp>
+          <ruleml:Ind>8.0 m</ruleml:Ind>
+        </ruleml:Greater>
+
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.lineOfSightBetween"/>
+          <ruleml:Var key="line_sight">Z</ruleml:Var>
+            <ruleml:Var keyref="#landing1" />
+            <ruleml:Var keyref="#landing2" />
+        </ruleml:Atom>
+
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Or>
+
+        </ruleml:Or>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+<lrml:PrescriptiveStatement key="D1.4.4.1.a">
+  <ruleml:Rule key="D1.4.4.1.a">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.taperedTread" />
+          <ruleml:Var key="tapered_tread">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.spiralStairway" />
+          <ruleml:Var key="spiral_stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.madeOf" />
+            <ruleml:Var keyref="#spiral_stairway" />
+            <ruleml:Var keyref="#tapered_tread" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Less>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.WidthOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.PitchLineOf" />
+              <ruleml:Var keyref="#tapered_tread" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>1.0 m</ruleml:Ind>
+        </ruleml:Less>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.4.1.b">
+  <ruleml:Rule key="D1.4.4.1.b">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.taperedTread" />
+          <ruleml:Var key="tapered_tread">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.curvedStairway" />
+          <ruleml:Var key="curved_stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.madeOf" />
+            <ruleml:Var keyref="#curved_stairway" />
+            <ruleml:Var keyref="#tapered_tread" />
+        </ruleml:Atom>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.WidthOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.PitchLineOf" />
+              <ruleml:Var keyref="#tapered_tread" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind>1.0 m</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+<lrml:PrescriptiveStatement key="D1.4.4.1.a.i">
+  <ruleml:Rule key="D1.4.4.1.a.i">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.taperedTread" />
+          <ruleml:Var key="tapered_tread">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.spiralStairway" />
+          <ruleml:Var key="spiral_stairway">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.madeOf" />
+            <ruleml:Var keyref="#curved_stairway" />
+            <ruleml:Var keyref="#tapered_tread" />
+        </ruleml:Atom>
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.DiameterOf" />
+            <ruleml:Var keyref="#spiral_stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind> 1.5 m</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.WidthOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.PitchLineOf" />
+              <ruleml:Var keyref="#tapered_tread" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind "buvo:nz.lit.BS_5395.2">
+            BS 5395: Part 2
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+<lrml:PrescriptiveStatement key="D1.4.4.2">
+  <ruleml:Rule key="D1.4.4.2">
+    <lrml:hasStrength>
+        <lrml:DefeasibleStrength iri="http://spin.nicta.com.au/spindle/ruleStrength#defeasible"/>
+    </lrml:hasStrength>
+    <ruleml:if>
+      <ruleml:And>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.taperedTread" />
+          <ruleml:Var key="tapered_tread1">X</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.taperedTread" />
+          <ruleml:Var key="tapered_tread2">Y</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.spiralStairway" />
+          <ruleml:Var key="spiral_stairway">Z</ruleml:Var>
+        </ruleml:Atom>
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.madeOf" />
+            <ruleml:Var keyref="#curved_stairway" />
+            <ruleml:Var keyref="#tapered_tread" />
+        </ruleml:Atom>
+        <ruleml:GreaterEqual>
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.DiameterOf" />
+            <ruleml:Var keyref="#spiral_stairway" />
+          </ruleml:Exp>
+          <ruleml:Ind> 1.5 m</ruleml:Ind>
+        </ruleml:GreaterEqual>
+      </ruleml:And>
+    </ruleml:if>
+    <ruleml:then>
+      <lrml:Obligation iri="devo:Achievement">
+        <ruleml:Atom>
+          <ruleml:Rel iri="buvo:nz.lit.ComplyWith" />
+          <ruleml:Exp>
+            <rulem:Fun iri="buvo:nz.lit.WidthOf" />
+            <ruleml:Exp>
+              <rulem:Fun iri="buvo:nz.lit.PitchLineOf" />
+              <ruleml:Var keyref="#tapered_tread" />
+            </ruleml:Exp>
+          </ruleml:Exp>
+          <ruleml:Ind "buvo:nz.lit.BS_5395.2">
+            BS 5395: Part 2
+          </ruleml:Ind>
+        </ruleml:Atom>
+      </lrml:Obligation>
+    </ruleml:then>
+  </ruleml:Rule>
+</lrml:PrescriptiveStatement>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</lrml:Statements>
+</xml>

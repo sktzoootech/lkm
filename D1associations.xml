@@ -1,0 +1,64 @@
+
+<!--
+<lrml:Association>
+    <lrml:appliesSource keyref="ARTICOLO NEL TESTO"/>
+    <lrml:toTarget keyref="#REGOLA"/>
+    <lrml:toTarget keyref="#REGOLA"/>
+</lrml:Association>
+-->
+
+<lrml:Association>
+    <lrml:appliesSource keyref="Definitions"/>
+    <lrml:toTarget keyref="#DEF:AccessibleRoute"/>
+</lrml:Association>
+
+<lrml:Association>
+    <lrml:appliesSource keyref="Definitions"/>
+    <lrml:toTarget keyref="#DEF:AccessibleStairway"/>
+</lrml:Association>
+
+
+
+----------------------------------------------------
+
+<ruleml:And>
+  <ruleml:Atom>
+    <ruleml:Rel iri="buvo:nz.lit.accessible_route" />
+    <ruleml:Var key="acc_route">X</ruleml:Var>
+  </ruleml:Atom>
+  <ruleml:Equal>
+    <ruleml:Exp>
+      <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+      <ruleml:Var keyref="#acc_route" />
+    </ruleml:Exp>
+    <ruleml:Ind>Concrete</ruleml:Ind>
+  </ruleml:Equal>
+</ruleml:And>
+
+AccessRoute(X) \wedge surfaceOf(X)=CONCRETE
+
+----------------------------------------------------
+
+<ruleml:And>
+  <ruleml:Atom>
+    <ruleml:Rel iri="buvo:nz.lit.accessible_route" />
+    <ruleml:Var key="acc_route">X</ruleml:Var>
+  </ruleml:Atom>
+  <ruleml:Atom>
+    <ruleml:Rel iri="buvo:nz.lit.madeOf"/>
+    <ruleml:Exp>
+      <rulem:Fun iri="buvo:nz.lit.SurfaceOf" />
+      <ruleml:Var keyref="#acc_route" />
+    </ruleml:Exp>
+    <ruleml:Ind iri="buvo:nz.lit.construction_material.concrete" />
+  </ruleml:Atom>
+</ruleml:And>
+
+AccessRoute(X) \wedge MadeOf(surface(X), CONCRETE)
+
+----------------------------------------------------
+
+Riga 3012: e' Rel o Var?
+Riga 3023: aggiustare valore in mm
+Riga 3060: aggiustare valore X
+Riga 3086: Fare 3.1.1
